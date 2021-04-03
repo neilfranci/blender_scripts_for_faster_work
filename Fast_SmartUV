@@ -1,0 +1,11 @@
+import bpy
+
+selection = bpy.context.selected_objects
+
+bpy.ops.object.select_all(action='DESELECT') 
+
+for obj in selection:
+    obj.select_set(True)
+    bpy.context.view_layer.objects.active = o
+    bpy.ops.uv.smart_project()
+    obj.select_set(False)
