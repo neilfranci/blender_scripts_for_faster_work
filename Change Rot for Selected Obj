@@ -1,0 +1,6 @@
+import bpy
+
+#for loop all selected object
+for obj in bpy.context.selected_objects:
+    
+    obj.rotation_euler = (0,0,0)
