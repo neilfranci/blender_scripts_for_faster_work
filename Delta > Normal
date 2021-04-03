@@ -1,0 +1,17 @@
+import bpy
+
+for obj in bpy.context.selected_objects:
+    # Store delta location of object
+    obj_deltaS = obj.delta_scale
+    obj_deltaL = obj.delta_location
+    obj_deltaR = obj.delta_rotation_euler
+
+    # Assign object location as delta location and Reset delta location to 0
+    obj.scale = obj_deltaS
+    obj.location = obj_deltaL
+    obj.rotation_euler = obj_deltaR
+    
+    # Set delta back to normal
+    obj.delta_rotation_euler = (0,0,0)
+    obj.delta_scale = (1,1,1)
+    obj.delta_location = (0,0,0)
