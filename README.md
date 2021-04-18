@@ -1,2 +1,2 @@
-# blender_scripts_for_faster_work
+# Blender scripts for faster work
 Like the Reposotory name
